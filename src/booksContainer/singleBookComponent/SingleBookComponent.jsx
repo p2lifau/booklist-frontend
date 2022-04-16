@@ -1,4 +1,4 @@
-
+import UpdateBookComponent from "./UpdateBookComponent"
 
 const SingleBookComponent = (props) => {
   return (
@@ -7,6 +7,8 @@ const SingleBookComponent = (props) => {
         <h3>{props.book.author}</h3>
         <h4>{props.book.year}</h4>
         <p>{props.book.description}</p>
+        <button onClick={()=> {props.deleteBook(props.book.id)}}>Delete {props.book.name}</button>
+        <UpdateBookComponent book = {props.book} handleUpdateBookInputChange = {props.handleUpdateBookInputChange} updateBook = {props.updateBook}></UpdateBookComponent>
     </div>
   )
 }
