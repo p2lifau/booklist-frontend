@@ -5,14 +5,14 @@ const NewBookComponent = (props) => {
     <div>
         <h5>Add New Book</h5>
         <form onSubmit={props.createNewBook}>
-            Title: <input onChange={props.handleNewBookInputChange} type="text" name='title'/>
-            <br />
-            Author: <input onChange={props.handleNewBookInputChange} type="text" name='author'/>
-            <br />
-            Year: <input onChange={props.handleNewBookInputChange} type="number" name='year'/>
-            <br />
-            Description: <input onChange={props.handleNewBookInputChange} type="text" name='description'/>
-            <button type='submit'>Submit</button>
+            <input onChange={props.handleNewBookInputChange} type="text" name='title' placeholder='Title'/>
+            
+            <input onChange={props.handleNewBookInputChange} type="text" name='author' placeholder='Author'/>
+            
+            <input onChange={props.handleNewBookInputChange} type="number" name='year' placeholder='Year'/>
+            
+            <input onChange={props.handleNewBookInputChange} type="text" name='description' placeholder='Description'/>
+            <button className='sub-btn' type='submit'>Submit</button>
         </form>
     </div>
   )

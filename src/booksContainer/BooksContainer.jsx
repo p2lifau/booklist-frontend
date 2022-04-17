@@ -21,8 +21,8 @@ class BooksContainer extends React.Component {
         }
     }
     handleNewBookInputChange =(e) => {
-        console.log(this)
-        console.log(e.target.value)
+        // console.log(this)
+        // console.log(e.target.value)
         this.setState({
             newBook:{
                 ...this.state.newBook,
@@ -99,8 +99,8 @@ class BooksContainer extends React.Component {
     }
     render(){
         return (
-            <div>
-                <h2>Books Container</h2>
+            <div className='book-container'>
+                <h2>Book List</h2>
                 <NewBookComponent 
                 createNewBook = {this.createNewBook}
                 handleNewBookInputChange = {this.handleNewBookInputChange}></NewBookComponent>

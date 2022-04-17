@@ -1,0 +1,48 @@
+.app {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 200px;
+}
+
+/* .single-book {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+} */
+
+.sub-btn {
+  background-color: aquamarine;
+  border: 0;
+  margin: 10px;
+  padding: 10px;
+}
+.edit-btn {
+  background-color: rgb(94, 152, 190);
+  border: 0;
+  margin: 10px;
+  padding: 10px;
+}
+.delete-btn {
+  background-color: red;
+  border: 0;
+  margin: 10px;
+  padding: 10px;
+  color: white;
+}
+.book-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+form {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+}
