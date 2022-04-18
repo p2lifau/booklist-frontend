@@ -33,7 +33,7 @@ class BooksContainer extends React.Component {
     // CREATE ROUTE
    createNewBook =   async (e) => {
         e.preventDefault()
-        const apiResponse = await fetch ("http://localhost:8000/api/books", {
+        const apiResponse = await fetch ("https://booklist-backend-api.herokuapp.com/api/books", {
             method: "POST",
             body: JSON.stringify(this.state.newBook),
             headers: {
@@ -48,7 +48,7 @@ class BooksContainer extends React.Component {
     }
     // function fetches our items from the server
     async getBooks() {
-        const getBooksApiResponse = await fetch('http://localhost:8000/api/books')
+        const getBooksApiResponse = await fetch('https://booklist-backend-api.herokuapp.com/api/books')
         const parsedBooks = await getBooksApiResponse.json();
         this.setState({
             books: parsedBooks
@@ -56,7 +56,7 @@ class BooksContainer extends React.Component {
     }
     // DELETE ROUTE
     deleteBook = async (idToDelete) => {
-        const deleteResponse = await fetch (`http://localhost:8000/api/books/${idToDelete}`,{
+        const deleteResponse = await fetch (`https://booklist-backend-api.herokuapp.com/api/books/${idToDelete}`,{
             method: "DELETE"
         })
         if(deleteResponse.status == 204){
@@ -78,7 +78,7 @@ class BooksContainer extends React.Component {
         })
     }
     updateBook = async (idToUpdate) => {
-        const apiResponse = await fetch (`http://localhost:8000/api/books/${idToUpdate}`, {
+        const apiResponse = await fetch (`https://booklist-backend-api.herokuapp.com/api/books/${idToUpdate}`, {
             method: "PUT",
             body: JSON.stringify(this.state.updateBook),
             headers: {
